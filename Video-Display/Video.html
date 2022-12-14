@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <!-- logo header -->
+    <link rel="shortcut icon" href="../Img/logo.png"/>
+    <!-- css -->
+    <link rel="stylesheet" href="../CSS/style_home.css">
+    <link rel="stylesheet" href="../CSS/style_common.css">
+
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/198f11ff77.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <!-- menu -->
+        <div class="navbar-menu "><i class="fa-solid fa-bars"></i></div>
+        <!-- logo -->
+        <a href="#" class="navbar-logo"><img src="../Img/logo.png" alt=""></a>
+        <!-- search -->
+        <div class="search-box">
+            <!-- search input -->
+            <input type="text" name="search-input" placeholder="Search...">
+            <!-- search button - looking event-->
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+        <!-- log up -->
+        <a href="./SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log up</span><span>Exist Account</span></a>
+        <!-- log in -->
+        <a href="./SignIn.html" class="log-in-btn button-57"><span class="text">Log up</span><span>Create Account!</span></a>
+    </div>
+    <!-- navbar slider -->
+    <div class="navbar-slider open">
+        <!-- main slider -->
+        
+        <div class="nav-title">
+            Si-zu-ka
+        </div>
+        <div class="stick"></div>
+
+        <ul>
+            <!-- home -->
+            <li class="nav-items active">
+                <i class="fa-solid fa-house"></i>
+                <a href="Home.html">Home</a>
+            </li>
+            <!-- trending -->
+            <li class="nav-items ">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <a href="">Trending</a>
+            </li>
+             <!-- libary -->
+            <li class="nav-items">
+                <i class="fa-solid fa-photo-film"></i>
+                <a href="">Libary</a>
+            </li>
+             <!-- subcribed -->
+            <li class="nav-items">
+                <i class="fa-solid fa-circle-nodes"></i>
+                <a href="">Following Channels</a>
+            </li>
+             <!-- history -->
+            <li class="nav-items">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <a href="">History</a>
+            </li>
+             <!-- like videos -->
+            <li class="nav-items">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <a href="">Favorite videos</a>
+            </li>
+        </ul>
+        <!-- manager -->
+        <div class="nav-title">
+            Manager
+        </div>
+        <div class="stick"></div>
+
+        <ul>
+            <!-- profile -->
+            <li class="nav-items">
+                <i class="fa-solid fa-address-card"></i>
+                <a href="">Profile</a>
+            </li>
+            <!-- uploads -->
+            <li class="nav-items">
+                <i class="fa-solid fa-upload"></i>
+                <a href="UploadVideo.html">Uploads</a>
+            </li>
+        </ul>
+    </div>
+    <!-- video display -->
+    <div class="video-display">
+        <div class="video-wrapper">
+            <video controls>
+                <source src="movie.mp4" type="video/mp4">
+                 <source src="movie.ogg" type="video/ogg">
+            </video>
+        </div>
+        <!-- title video -->
+        .title
+    </div>
+
+    </div>
+
+    <script>
+        const navbarMenu = document.querySelector('.navbar-menu');
+        const navbarSlider = document.querySelector('.navbar-slider');
+        const navbarItems = document.querySelectorAll('.nav-items');
+        
+        // show and hide the navbar slider
+        navbarMenu.addEventListener('click',function(){
+            navbarSlider.classList.toggle('open')
+        })
+        //active the items in navbar slider
+        navbarItems.forEach(items=>{
+            items.addEventListener('click',function(){
+                console.log('chose')
+                navbarItems.forEach(item=>{
+                    item.classList.remove('active')
+                })
+                items.classList.add('active')
+
+            })
+        }
+        )
+
+    </script>
+</body>
+
+</html>

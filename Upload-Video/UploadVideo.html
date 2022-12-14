@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <!-- logo header -->
+    <link rel="shortcut icon" href="../Img/logo.png"/>
+    <!-- css -->
+    <link rel="stylesheet" href="../CSS/style_home.css">
+    <link rel="stylesheet" href="../CSS/style_common.css">
+    <link rel="stylesheet" href="../CSS/style_upload.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/198f11ff77.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <!-- menu -->
+        <div class="navbar-menu "><i class="fa-solid fa-bars"></i></div>
+        <!-- logo -->
+        <a href="#" class="navbar-logo"><img src="../Img/logo.png" alt=""></a>
+        <!-- search -->
+        <div class="search-box">
+            <!-- search input -->
+            <input type="text" name="search-input" placeholder="Search...">
+            <!-- search button - looking event-->
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+        <!-- log up -->
+        <a href="../SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log up</span><span>Exist Account</span></a>
+        <!-- log in -->
+        <a href="../SignIn.html" class="log-in-btn button-57"><span class="text">Log up</span><span>Create Account!</span></a>
+    </div>
+    <div class="navbar-slider open">
+        <!-- main slider -->
+        
+        <div class="nav-title">
+            Si-zu-ka
+        </div>
+        <div class="stick"></div>
+
+        <ul>
+            <!-- home -->
+            <li class="nav-items ">
+                <i class="fa-solid fa-house"></i>
+                <a href="Home.html">Home</a>
+            </li>
+            <!-- trending -->
+            <li class="nav-items ">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <a href="">Trending</a>
+            </li>
+             <!-- libary -->
+            <li class="nav-items">
+                <i class="fa-solid fa-photo-film"></i>
+                <a href="">Libary</a>
+            </li>
+             <!-- subcribed -->
+            <li class="nav-items">
+                <i class="fa-solid fa-circle-nodes"></i>
+                <a href="">Following Channels</a>
+            </li>
+             <!-- history -->
+            <li class="nav-items">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <a href="">History</a>
+            </li>
+             <!-- like videos -->
+            <li class="nav-items">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <a href="">Favorite videos</a>
+            </li>
+        </ul>
+        <!-- manager -->
+        <div class="nav-title">
+            Manager
+        </div>
+        <div class="stick"></div>
+
+        <ul>
+            <!-- profile -->
+            <li class="nav-items">
+                <i class="fa-solid fa-address-card"></i>
+                <a href="">Profile</a>
+            </li>
+            <!-- uploads -->
+            <li class="nav-items active">
+                <i class="fa-solid fa-upload"></i>
+                <a href="UploadVideo.html">Uploads</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <!-- upload body -->
+    <div class="upload-body">
+        <!-- title upload -->
+        <!-- upload button -->
+        <div class="upload-btn">
+            <h3 class="upload-title">Choose the file to upload.</h3>
+            <input type="file"  id="addVideosInput" accept=" video/*" style="display: none;">
+            <button class="button-6 btn-secondary" id="addVideosBtn">Add Videos <i class="fa fa-camera icon"></i> </button>
+        </div>
+        <!-- setting -->
+        <div class="setting">
+           
+           <div class="left-side-setting">
+            <h2>Setting</h2>
+             <!-- title -->
+             <label for="title-video">Title</label>
+             <br>
+             <input type="text" name="title-video" id="title-video" class="title-video-input no-outline" placeholder="The name of video">
+             <br>
+             <!-- description -->
+             <label for="description-video">Description</label>
+             <br>
+             <textarea name="description-video" id="description-video" cols="50" rows="4" placeholder="More details for video"></textarea>
+             <br>
+
+             <!-- playlist -->
+             <label for="playlist-video">Playlist</label>
+             <select name="playlist-select" id="playlist-select">
+                 <option value="music">music</option>
+                 <option value="action">action</option>
+                 <option value="fiction">fiction</option>
+             </select>
+             <br>
+
+              <!-- video uploaded -->
+              <div class="video-list">
+             </div>
+           </div>
+           <div class="right-side-setting">
+            <!-- visibillity mode -->
+                <label for="visibillity">visibillity</label>
+                <!-- public mode -->
+                <h3 class="checbox-title">Public <input type="checkbox" name="public-mode" id="public-mode"></h3>
+                <p class="mode-note">Anyone can discover and see this video</p>
+                <!-- private mode -->
+                <h3 class="checbox-title">Private  <input type="checkbox" name="private-mode" id="private-mode"></h3>
+                <p class="mode-note">Only you can see this video</p>
+                
+                <!-- upload thumbnails -->
+                <h3 class="thumnails-upload-title">Set the thumbails.</h3>
+                <input type="file"  id="thumbnails-img-src" accept=" image/*" style="display: none;">
+                <button class="button-6 " id="thumbnails-upload-button">Custom Thumbnails <i class="fa-solid fa-wrench icon" ></i> </button>
+                <!-- thumnails uploaded -->
+                <div class="thumbnails">
+                    <img src="../Img/Thumbnails-img.jpg" alt="Thumbnails" id="sample-img">
+                </div>
+                <!-- submit button -->
+                <button type="submit" name="submit" class="btn save-for-all">Save for all</button>
+
+
+           </div>
+            
+
+
+        </div>
+
+    </div>
+    <script>
+        const navbarMenu = document.querySelector('.navbar-menu');
+        const navbarSlider = document.querySelector('.navbar-slider');
+        const navbarItems = document.querySelectorAll('.nav-items');
+        
+        
+        // show and hide the navbar slider
+        navbarMenu.addEventListener('click',function(){
+            navbarSlider.classList.toggle('open')
+        })
+        //active the items in navbar slider
+        navbarItems.forEach(items=>{
+            items.addEventListener('click',function(){
+                console.log('chose')
+                navbarItems.forEach(item=>{
+                    item.classList.remove('active')
+                })
+                items.classList.add('active')
+
+            })
+        }
+        )
+        //upload video
+        $('#addVideosBtn').click(function() {
+            // hide the upload btn
+            $('.upload-btn').css('display','none')
+            $('.setting').css('display','flex')
+
+            
+
+            
+            $(this).parents().find('#addVideosInput').click();
+        });
+
+            document.getElementById('addVideosInput').onchange = e => {
+            const fileVideo = e.target.files[0];
+            //src of mp4 file
+            const url = URL.createObjectURL(fileVideo);
+            //save the link of video to edit
+         
+            const li = ` 
+            <div> 
+
+            <video controls="controls" src=" ${url} " type="video/mp4" width="600px" height="480px"></video>
+            
+            
+            </div>`
+            $('.video-list').append(li);  
+            };
+
+
+        // upload thumbnails
+        $('#thumbnails-upload-button').click(function() {
+            // hide the upload btn
+            $('#sample-img').css('display','none')
+            if($('#thumbnails-img')){
+                $('#thumbnails-img').remove()
+            }
+            $(this).parents().find('#thumbnails-img-src').click();
+        });
+
+            document.getElementById('thumbnails-img-src').onchange = e => {
+            const file = e.target.files[0];
+            //src of img file
+            const url = URL.createObjectURL(file);
+            //create img
+            const thumbnailImg = ` 
+                <img src="${url}" alt="Thumbnails" id="thumbnails-img">
+            `
+            $('.thumbnails').append(thumbnailImg);  
+            };
+    </script>
+</body>
+
+</html>
+<!-- <a href="" style="color: white" class="edit btn">Edit this video<i class="fa-solid fa-wrench icon" ></i></a>  -->
