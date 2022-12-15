@@ -146,14 +146,42 @@
             </div>
             <h2 class="comments-titles">Comments</h2>
             <!-- comments of other users -->
-            <div class="comment-others">
-                <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
-                <img src="../Img/Thumbnails-img.jpg" alt="" class="comment-other-user-avt">
-                <p class="comment-details">Tao ko phải cuối cùng, cũng k thèm đầu tiên nhưng miễn sao có riêng góc nhìn và nhịp điệu
-                    Trãi qua quá trình mà tao khám phá mình đã bật được cá tính mà đặt ra biệt hiệu 
-                    Lòng tin,tình yêu, và kết nối,thứ cho tao thêm đường binh khi hết lối
-                    Cũng cần có thời điểm lúc xây dựng đồng minh, chọn cùng cộng sinh hoặc là chết đói
-                    Khi mà tao biết là mình cần phải lớn, lúc đã có quá nhiều thằng kêu tao anh </p>
+            <!-- comment-list -->
+            <div class="comment-list">
+                <div class="comment-others ">
+                    <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
+                    <img src="../Img/Thumbnails-img.jpg " alt="" class="comment-other-user-avt">
+                        <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+    
+                            Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
+      
+                  </div>
+                
+                <div class="comment-others">
+                    <h3 class="comment-other-user-name ">Name of user is typing this comment</h3>
+                    <img src="../Img/Thumbnails-img.jpg" alt="" class="comment-other-user-avt">
+                        <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+    
+                            Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
+                            
+                            Learn more about data types for Access web apps.
+                            
+                            Default controls for Long Text and Short Text fields
+                            In most cases, Access uses Text Box controls to display Short Text or Long Text fields. However, when you add a Long Text field to a view in an Access web app, Access creates a Multiline Textbox. When using a Multiline Textbox in the browser, you can press Enter to move to a new line in the textbox. If you’re in a datasheet, you’ll need to use the scrollbars to see anything below the first line.
+                            
+                            In Desktop databases, if a Long Text field is configured to show Rich Text, and you add that field to a form or report, Access automatically applies the Rich Text setting to the text box. </p>
+                    
+                    
+                  </div>
+                <div class="comment-others">
+                    <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
+                    <img src="../Img/Thumbnails-img.jpg" alt="" class="comment-other-user-avt">
+                    <p class="comment-details ">Tao ko phải cuối cùng, cũng k thèm đầu tiên nhưng miễn sao có riêng góc nhìn và nhịp điệu
+                        Trãi qua quá trình mà tao khám phá mình đã bật được cá tính mà đặt ra biệt hiệu 
+                        Lòng tin,tình yêu, và kết nối,thứ cho tao thêm đường binh khi hết lối
+                        Cũng cần có thời điểm lúc xây dựng đồng minh, chọn cùng cộng sinh hoặc là chết đói
+                        Khi mà tao biết là mình cần phải lớn, lúc đã có quá nhiều thằng kêu tao anh </p>
+                </div>
             </div>
 
         </div>
@@ -185,11 +213,32 @@
             })
         }
         )
-
         //show all description which was hidden
         $('.video-description').click(function(){
             $('.details-description').toggleClass('none-line-clamp line-clamp')
         })
+        // solve comments
+        document.querySelectorAll('.comment-others').forEach(function(cmt){
+            cmt.addEventListener('mouseover',function(){
+                let details=cmt.querySelector('.comment-details')
+                details.style.background ='#c49999'
+                details.style.zIndex = '999'
+                details.classList.add('none-line-clamp')
+                details.classList.remove('line-clamp')
+
+
+            })
+            cmt.addEventListener('mouseout',function(){
+                let details=cmt.querySelector('.comment-details')
+                details.style.background ='#f3f3f3'
+                details.style.zIndex = '1'
+                details.classList.add('line-clamp')
+                details.classList.remove('none-line-clamp')
+
+
+            })
+        })
+        
 
     </script>
 </body>
