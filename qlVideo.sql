@@ -44,21 +44,155 @@ INSERT INTO `user` (`fullname`, `username`, `password`, `email`, `img`) VALUES
 CREATE TABLE `video` (
   `id_video` int(11) NOT NULL,
   `namevideo` varchar(128) NOT NULL,
-  `chanel` varchar(128) NOT NULL,
   `view` int(15) NOT NULL,
   `dayupload` datetime NOT NULL,
   `thumbnail` varchar(128) NOT NULL,
-  `active` tinyint(1) DEFAULT NULL
+  `mode` tinyint(1) DEFAULT NULL,
+  `username` varchar(128) NOT NULL,
+  `link` varchar(128) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `video`
 --
 
-INSERT INTO `video` (`id_video`, `namevideo`, `chanel`, `view`, `dayupload`, `thumbnail`, `active`) VALUES
-(11, 'Basic Python', 'LuyenPro123', 123345, '2022-10-27', '', 1),
-(21, 'Pro PHP', 'Luyện Siêu Cấp Vip Pro', 192854, '2022-10-27', '', 0),
-(31, 'Learn NodeJS with TT', 'Tấn Thành TDTU', 23756, '2022-10-27', '', 1);
+INSERT INTO `video` (`id_video`, `namevideo`, `view`, `dayupload`, `thumbnail`, `mode`, `username`, `link`) VALUES
+(11, 'Basic Python', 123345, '2022-10-27', '', 1, 'nguyenbathanh1', ' '),
+(21, 'Pro PHP', 192854, '2022-10-27', '', 0, 'voluyen2', ' '),
+(31, 'Learn NodeJS with TT', 23756, '2022-10-27', '', 1, 'nguyentanthanh3', ' ');
+
+-- --------------------------------------------------------
+
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `playlist`
+--
+
+CREATE TABLE `playlist` (
+  `id_playlist` int(11) NOT NULL,
+  `id_video` int(11) NOT NULL,
+  `username` varchar(128) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `playlist`
+--
+
+INSERT INTO `playlist` (`id_playlist`, `id_video`, `username`) VALUES
+(123, 11, 'nguyenbathanh1'),
+(124, 21, 'voluyen2'),
+(125, 31, 'nguyentanthanh3');
+
+-- --------------------------------------------------------
+
+
+--
+-- Cấu trúc bảng cho bảng `nameplaylist`
+--
+
+CREATE TABLE `nameplaylist` (
+  `id_playlist` int(11) NOT NULL,
+  `name_playlist` varchar(128) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `playlist`
+--
+
+INSERT INTO `nameplaylist` (`id_playlist`, `name_playlist`) VALUES
+(123, 'Playlist 1'),
+(124, 'Playlist 2'),
+(125, 'Playlist 3');
+
+-- --------------------------------------------------------
+
+
+--
+-- Cấu trúc bảng cho bảng `subscribe`
+--
+
+CREATE TABLE `subscribe` (
+  `registered_account` varchar(128) NOT NULL,
+  `username` varchar(128) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `subscribe`
+--
+
+INSERT INTO `subscribe` (`registered_account`, `username`) VALUES
+('luphu5', 'nguyenbathanh1'),
+('lehaitien4', 'voluyen2'),
+('luphu5', 'nguyentanthanh3');
+
+-- --------------------------------------------------------
+
+
+--
+-- Cấu trúc bảng cho bảng `history`
+--
+
+CREATE TABLE `history` (
+  `id_history` int(11) NOT NULL,
+  `id_video` int(11) NOT NULL,
+  `date_watch` datetime NOT NULL,
+  `username` varchar(128) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `history`
+--
+
+INSERT INTO `history` (`id_history`, `id_video`, `date_watch`, `username`) VALUES
+(1234, 21, '2022-10-27', 'nguyenbathanh1'),
+(1235, 31, '2022-10-27', 'voluyen2'),
+(1236, 11, '2022-10-27', 'nguyentanthanh3');
+
+-- --------------------------------------------------------
+
+
+--
+-- Cấu trúc bảng cho bảng `liked`
+--
+
+CREATE TABLE `liked` (
+  `id_video` int(11) NOT NULL,
+  `username` varchar(128) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `liked`
+--
+
+INSERT INTO `liked` (`id_video`, `username`) VALUES
+(21, 'nguyenbathanh1'),
+(31, 'voluyen2'),
+(11, 'nguyentanthanh3');
+
+-- --------------------------------------------------------
+
+
+--
+-- Cấu trúc bảng cho bảng `comment`
+--
+
+CREATE TABLE `comment` (
+  `id_comment` int(11) NOT NULL,
+  `username` varchar(128) NOT NULL,
+  `content` varchar(128) NOT NULL,
+  `id_video` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `comment`
+--
+
+INSERT INTO `comment` (`id_comment`, `username`, `content`, `id_video`) VALUES
+(12345, 'nguyenbathanh1', 'Hay quá', 11),
+(12346, 'voluyen2', 'Dở tệ', 21),
+(12347, 'nguyentanthanh3', 'Bình thường', 31);
 
 -- --------------------------------------------------------
 
@@ -81,6 +215,24 @@ ALTER TABLE `video`
   ADD PRIMARY KEY (`id_video`);  
 
 --
+-- Chỉ mục cho bảng `playlist`
+--
+ALTER TABLE `playlist`
+  ADD PRIMARY KEY (`id_playlist`);  
+
+--
+-- Chỉ mục cho bảng `history`
+--
+ALTER TABLE `history`
+  ADD PRIMARY KEY (`id_history`);  
+
+--
+-- Chỉ mục cho bảng `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id_comment`);  
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -89,4 +241,11 @@ ALTER TABLE `video`
 --
 ALTER TABLE `video`
   MODIFY `id_video` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+COMMIT;
+
+--
+-- AUTO_INCREMENT cho bảng `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12350;
 COMMIT;
