@@ -129,6 +129,11 @@
     position: relative;
     height: 200px;
 }
+
+.body-user-comment{
+    display: block;
+}
+
 .user-avt,.comment-other-user-avt{
     position: absolute;
     left: 0;
@@ -156,31 +161,30 @@
     background-color: #f3f3f3;
 
 
-
 }
 .comment-btn{
     position: absolute;
     right: 0;
+    bottom: 0;
 }
 
 /* other comment */
 .comment-list{
     position: relative;
     height: auto;
-    display: block; 
-
-    
-    
+    /* display: flexbox;  */
+       
 }
+
 .comment-others{
     padding: 12px;
     margin: 12px 0 ;
     position: relative;
-    height: 100px;   
+    height: auto;   
 }
 
 .comment-details{
-    position: absolute;
+    position: relative;
     width: 80%;
     height: auto;
     top: 40px;

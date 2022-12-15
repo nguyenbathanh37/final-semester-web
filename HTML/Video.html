@@ -151,16 +151,16 @@
                 <div class="comment-others ">
                     <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
                     <img src="../Img/Thumbnails-img.jpg " alt="" class="comment-other-user-avt">
-                        <p class="comment-details line-clamp">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+                        <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
     
                             Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
       
                   </div>
                 
                 <div class="comment-others">
-                    <h3 class="comment-other-user-name line-clamp">Name of user is typing this comment</h3>
+                    <h3 class="comment-other-user-name ">Name of user is typing this comment</h3>
                     <img src="../Img/Thumbnails-img.jpg" alt="" class="comment-other-user-avt">
-                        <p class="comment-details line-clamp">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+                        <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
     
                             Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
                             
@@ -176,13 +176,14 @@
                 <div class="comment-others">
                     <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
                     <img src="../Img/Thumbnails-img.jpg" alt="" class="comment-other-user-avt">
-                    <p class="comment-details line-clamp">Tao ko phải cuối cùng, cũng k thèm đầu tiên nhưng miễn sao có riêng góc nhìn và nhịp điệu
+                    <p class="comment-details ">Tao ko phải cuối cùng, cũng k thèm đầu tiên nhưng miễn sao có riêng góc nhìn và nhịp điệu
                         Trãi qua quá trình mà tao khám phá mình đã bật được cá tính mà đặt ra biệt hiệu 
                         Lòng tin,tình yêu, và kết nối,thứ cho tao thêm đường binh khi hết lối
                         Cũng cần có thời điểm lúc xây dựng đồng minh, chọn cùng cộng sinh hoặc là chết đói
                         Khi mà tao biết là mình cần phải lớn, lúc đã có quá nhiều thằng kêu tao anh </p>
                 </div>
             </div>
+            <!-- comments of other users -->
 
         </div>
         <div class="right side">
@@ -223,7 +224,6 @@
                 let details=cmt.querySelector('.comment-details')
                 details.style.background ='#c49999'
                 details.style.zIndex = '999'
-                details.style.color ='#fff'
                 details.classList.add('none-line-clamp')
                 details.classList.remove('line-clamp')
 
@@ -234,12 +234,11 @@
                 details.style.background ='#f3f3f3'
                 details.style.zIndex = '1'
                 details.classList.add('line-clamp')
-                details.style.color ='#000'
                 details.classList.remove('none-line-clamp')
 
 
-            })
-        })
+        //     })
+        // })
         
 
     </script>
