@@ -127,69 +127,76 @@
 .comment-box{
     padding: 12px;
     position: relative;
-    height: 200px;
+    display: flex;
+    height: auto;
 }
 
 .body-user-comment{
+    padding: 10px;
+    position: relative;
     display: block;
+    
+    height: auto;
 }
 
-.user-avt,.comment-other-user-avt{
-    position: absolute;
+a .user-avt,a .comment-other-user-avt{
+    position: relative;
     left: 0;
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }   
 .user-name,.comment-other-user-name{
-    position: absolute;
-    left: 80px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
     font-size: 16px;
 }
 .comment-input{
-    position: absolute;
-    width: 80%;
-    height: 50px;
-    font-size: 16px;
-    top: 60px;
-    left: 80px; 
-    padding: 5px;
+    position: relative;
+    display: inline-block;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: groove;
     background-color: #f3f3f3;
-
+    width: 100%;
 
 }
 .comment-btn{
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    display: block;
+    position: relative;
+    float: right;
 }
 
 /* other comment */
 .comment-list{
-    position: relative;
+    display: block;
+    position: absolute;
     height: auto;
+    width: 100%;
     /* display: flexbox;  */
        
 }
 
+.comment-list{
+    display: block;
+    position: absolute;
+    height: auto;
+    width: 100%;
+}
+
 .comment-others{
-    padding: 12px;
-    margin: 12px 0 ;
+    display: inline-block;
     position: relative;
     height: auto;   
 }
 
 .comment-details{
     position: relative;
-    width: 80%;
+    width: 100%;
     height: auto;
-    top: 40px;
-    left: 80px;
-    padding: 5px;
+
     font-weight: 300;
     border-radius: 20px;
 }
