@@ -16,6 +16,9 @@
     <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
     <!-- icon -->
     <script src="https://kit.fontawesome.com/198f11ff77.js" crossorigin="anonymous"></script>
+     <!-- loading page -->
+     <link rel="stylesheet" href="../CSS/Page-loading.css">
+     <script src="../Javascript/Page-loading.js"></script>
 </head>
 
 <body>
@@ -35,70 +38,66 @@
             </a>
         </div>
         <!-- log up -->
-        <a href="./SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log up</span><span>Exist Account</span></a>
+        <a href="./SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log up</span><span>Create Account!</span></a>
         <!-- log in -->
-        <a href="./SignIn.html" class="log-in-btn button-57"><span class="text">Log up</span><span>Create Account!</span></a>
+        <a href="./SignIn.html" class="log-in-btn button-57"><span class="text">Log in</span><span>Exist Account </span></a>
     </div>
-    <!-- navbar slider -->
-    <div class="navbar-slider open">
-        <!-- main slider -->
-        
-        <div class="nav-title">
-            Si-zu-ka
+    <!-- body -->
+        <!-- navbar slider -->
+        <div class="navbar-slider">
+            <!-- main slider -->
+            <div class="nav-title">
+                Si-zu-ka
+            </div>
+            <div class="stick"></div>
+            <!-- MAIN's elements -->
+                <!-- home -->
+                <a href="../HTML/Home.html" class="nav-items">
+                    <i class="fa-solid fa-house"></i>
+                    <div  class="nav-items-title">Home</div>
+                </a>
+                <!-- trending -->
+                <a href="../HTML/Trending.html" class="nav-items">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <div  class="nav-items-title">Trending</div>
+                </a>
+                 <!-- libary -->
+                <a href="../HTML/Libary.html" class="nav-items">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <div  class="nav-items-title">Libary</div>
+                </a>
+                 <!-- subcribed -->
+                <a href="../HTML/Following-channels.html" class="nav-items">
+                    <i class="fa-solid fa-circle-nodes"></i>
+                    <div  class="nav-items-title">Following Channels</div>
+                </a>
+                 <!-- history -->
+                <a href="../HTML/History.html" class="nav-items">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <div  class="nav-items-title">History</div>
+                </a>
+                 <!-- like videos -->
+                <a href="../HTML/Favorite-videos.html" class="nav-items">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <div  class="nav-items-title">Favorite videos</div>
+                </a>
+            <!-- MANAGER -->
+            <div class="nav-title">
+                Manager
+            </div>
+            <div class="stick"></div>
+            <!-- MANAGER's elements -->
+                <!-- profile -->
+                <a href="../HTML/Profile.html" class="nav-items">
+                    <i class="fa-solid fa-address-card"></i>
+                    <div  class="nav-items-title">Profile</div>
+                </a>
+                <!-- uploads -->
+                <a href="../HTML/UploadVideo.html" class="nav-items">
+                    <i class="fa-solid fa-upload"> </i>
+                    <div  class="nav-items-title">Uploads</div>
+                </a>
         </div>
-        <div class="stick"></div>
-
-        <ul>
-            <!-- home -->
-            <li class="nav-items active">
-                <i class="fa-solid fa-house"></i>
-                <a href="Home.html">Home</a>
-            </li>
-            <!-- trending -->
-            <li class="nav-items ">
-                <i class="fa-solid fa-fire-flame-curved"></i>
-                <a href="">Trending</a>
-            </li>
-             <!-- libary -->
-            <li class="nav-items">
-                <i class="fa-solid fa-photo-film"></i>
-                <a href="">Libary</a>
-            </li>
-             <!-- subcribed -->
-            <li class="nav-items">
-                <i class="fa-solid fa-circle-nodes"></i>
-                <a href="">Following Channels</a>
-            </li>
-             <!-- history -->
-            <li class="nav-items">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <a href="">History</a>
-            </li>
-             <!-- like videos -->
-            <li class="nav-items">
-                <i class="fa-solid fa-thumbs-up"></i>
-                <a href="">Favorite videos</a>
-            </li>
-        </ul>
-        <!-- manager -->
-        <div class="nav-title">
-            Manager
-        </div>
-        <div class="stick"></div>
-
-        <ul>
-            <!-- profile -->
-            <li class="nav-items">
-                <i class="fa-solid fa-address-card"></i>
-                <a href="">Profile</a>
-            </li>
-            <!-- uploads -->
-            <li class="nav-items">
-                <i class="fa-solid fa-upload"></i>
-                <a href="UploadVideo.html">Uploads</a>
-            </li>
-        </ul>
-    </div>
     <!-- video display -->
     <div class="wrapper">
         <div class="left-side">
@@ -137,6 +136,7 @@
             <div class="stick-separate"></div>
             <!-- create comment -->
             <div class="comment-box">
+<<<<<<< HEAD
                 
                 <h3 class="user-name">Name of user is typing this comment</h3>
                 <img src="../Img/Thumbnails-img.jpg" alt="" class="user-avt">
@@ -181,6 +181,127 @@
                         Lòng tin,tình yêu, và kết nối,thứ cho tao thêm đường binh khi hết lối
                         Cũng cần có thời điểm lúc xây dựng đồng minh, chọn cùng cộng sinh hoặc là chết đói
                         Khi mà tao biết là mình cần phải lớn, lúc đã có quá nhiều thằng kêu tao anh </p>
+=======
+                <!-- header to comment -->
+                <a href="#"><img class="user-avt" src="../Img/none-avt.jpg" alt=""></a>
+
+                <!-- body to usser comment -->
+                <div class="body-user-comment">
+                    <h3 class="user-name">Name of user is typing this comment</h3>
+                    <textarea name="comment-area" id="comment-area" cols="100" rows="" class="comment-input" style="overflow: auto;"></textarea>
+                    <!-- comment btn -->
+                    <input type="button" name="comment" class="comment-btn button-6" value="Comment">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="header-comment">
+                <!-- header -->
+                <h2 class="comments-titles">Comments</h2>
+
+                <!-- comment-list -->
+                <div class="comment-list">
+                    <div class="comment-others">
+                        <!-- body another user comment -->
+                        <a href="#"><img class="comment-other-user-avt" src="../Img/none-avt.jpg" alt=""></a>
+                        
+                        <!-- body to usser comment -->
+                        <div class="body-user-comment">
+                            <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
+                            <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+                                Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
+                            </p>
+                            
+                            <div class="comment-box">
+                            <!-- header to comment -->
+                            <a href="#"><img class="user-avt" src="../Img/none-avt.jpg" alt=""></a>
+
+                            <!-- body to usser comment -->
+                            <div class="body-user-comment">
+                                <h3 class="user-name">Name of user is typing this comment</h3>
+                                <textarea name="comment-area" id="comment-area" cols="100" rows="" class="comment-input" style="overflow: auto;"></textarea>
+                                <!-- comment btn -->
+                                <input type="button" name="comment" class="comment-btn button-6" value="Comment">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-others">
+                        <!-- body another user comment -->
+                        <a href="#"><img class="comment-other-user-avt" src="../Img/none-avt.jpg" alt=""></a>
+                        
+                        <!-- body to usser comment -->
+                        <div class="body-user-comment">
+                            <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
+                            <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+                                Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
+                            </p>
+                            
+                            <div class="comment-box">
+                            <!-- header to comment -->
+                            <a href="#"><img class="user-avt" src="../Img/none-avt.jpg" alt=""></a>
+
+                            <!-- body to usser comment -->
+                            <div class="body-user-comment">
+                                <h3 class="user-name">Name of user is typing this comment</h3>
+                                <textarea name="comment-area" id="comment-area" cols="100" rows="" class="comment-input" style="overflow: auto;"></textarea>
+                                <!-- comment btn -->
+                                <input type="button" name="comment" class="comment-btn button-6" value="Comment">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-others">
+                        <!-- body another user comment -->
+                        <a href="#"><img class="comment-other-user-avt" src="../Img/none-avt.jpg" alt=""></a>
+                        
+                        <!-- body to usser comment -->
+                        <div class="body-user-comment">
+                            <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
+                            <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+                                Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
+                            </p>
+                            
+                            <div class="comment-box">
+                            <!-- header to comment -->
+                            <a href="#"><img class="user-avt" src="../Img/none-avt.jpg" alt=""></a>
+
+                            <!-- body to usser comment -->
+                            <div class="body-user-comment">
+                                <h3 class="user-name">Name of user is typing this comment</h3>
+                                <textarea name="comment-area" id="comment-area" cols="100" rows="" class="comment-input" style="overflow: auto;"></textarea>
+                                <!-- comment btn -->
+                                <input type="button" name="comment" class="comment-btn button-6" value="Comment">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-others">
+                        <!-- body another user comment -->
+                        <a href="#"><img class="comment-other-user-avt" src="../Img/none-avt.jpg" alt=""></a>
+                        
+                        <!-- body to usser comment -->
+                        <div class="body-user-comment">
+                            <h3 class="comment-other-user-name">Name of user is typing this comment</h3>
+                            <p class="comment-details ">Long Text   In Access web apps, the Long Text field can store up to 2^30-1 bytes, and is equivalent to the SQL Server data type of nvarchar(max). If you want, you can set a character limit to prevent your users from using the full capacity of the field. You can’t store Rich Text in Access web apps.
+                                Short Text    In Access web apps the Short Text field is set to store 255 characters by default, but you can adjust the Character Limit property all the way up to 4000 characters. Its SQL Server equivalent is nvarchar, with length from 1 to 4000.
+                            </p>
+                            
+                            <div class="comment-box">
+                            <!-- header to comment -->
+                            <a href="#"><img class="user-avt" src="../Img/none-avt.jpg" alt=""></a>
+
+                            <!-- body to usser comment -->
+                            <div class="body-user-comment">
+                                <h3 class="user-name">Name of user is typing this comment</h3>
+                                <textarea name="comment-area" id="comment-area" cols="100" rows="" class="comment-input" style="overflow: auto;"></textarea>
+                                <!-- comment btn -->
+                                <input type="button" name="comment" class="comment-btn button-6" value="Comment">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+>>>>>>> eafdea5f90c3da8ecb38dc9cb28d015d4c09cb6e
                 </div>
             </div>
             <!-- comments of other users -->
@@ -214,6 +335,12 @@
             })
         }
         )
+        $('textarea').each(function () {
+            this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+            }).on('input', function () {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
         //show all description which was hidden
         $('.video-description').click(function(){
             $('.details-description').toggleClass('none-line-clamp line-clamp')
