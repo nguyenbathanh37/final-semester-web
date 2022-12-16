@@ -1,3 +1,10 @@
+<?php
+    if(isset($_COOKIE["username"])){
+        header("Location: Home.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
