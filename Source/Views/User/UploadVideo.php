@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload</title>
     <!-- logo header -->
-    <link rel="shortcut icon" href="images/logo.png"/>
+    <link rel="shortcut icon" href="../../assets/images/logo.png" />
     <!-- css -->
-    <link rel="stylesheet" href="css/style_home.css">
-    <link rel="stylesheet" href="css/style_common.css">
-    <link rel="stylesheet" href="css/style_upload.css">
+    <link rel="stylesheet" href="../../assets/css/style_home.css">
+    <link rel="stylesheet" href="../../assets/css/style_common.css">
+    <link rel="stylesheet" href="../../assets/css/style_upload.css">
+
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
@@ -20,18 +21,15 @@
      <!-- Bootstrap -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <!-- loading page -->
-    <link rel="stylesheet" href="../CSS/Page-loading.css">
-    <script src="../Javascript/Page-loading.js"></script>
 </head>
 
 <body>
-     <!-- navbar -->
-     <div class="navbar-main">
+       <!-- navbar -->
+       <div class="navbar-main">
         <!-- menu -->
         <div class="navbar-main-menu "><i class="fa-solid fa-bars"></i></div>
         <!-- logo -->
-        <a href="#" class="navbar-main-logo"><img src="images/logo.png" alt=""></a>
+        <a href="#" class="navbar-main-logo"><img src="../../assets/images/logo.png" alt=""></a>
         <!-- search -->
         <div class="search-box">
             <!-- search input -->
@@ -42,13 +40,76 @@
             </a>
         </div>
         <!-- log up -->
-        <a href="./SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log up</span><span>Create Account!</span></a>
+        <a href="./SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log
+                up</span><span>Create Account!</span></a>
         <!-- log in -->
-        <a href="./SignIn.html" class="log-in-btn button-57"><span class="text">Log in</span><span>Exist Account </span></a>
+        <a href="./SignIn.html" class="log-in-btn button-57"><span class="text">Log in</span><span>Exist Account
+            </span></a>
     </div>
     <!-- body -->
-        <!-- navbar-main slider -->
-        <div class="navbar-main-slider">
+    <!-- navbar-main slider -->
+    <div class="navbar-main-slider">
+        <!-- main slider -->
+        <div class="nav-title">
+            Si-zu-ka
+        </div>
+        <div class="stick"></div>
+        <!-- MAIN's elements -->
+        <!-- home -->
+        <a href="../../Views/Home/Home.php" class="nav-items">
+            <i class="fa-solid fa-house"></i>
+            <div class="nav-items-title">Home</div>
+        </a>
+        <!-- trending -->
+        <a href="../../Views/Video/Trending.php" class="nav-items">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <div class="nav-items-title">Trending</div>
+        </a>
+        <!-- libary -->
+        <a href="../../Views/Video/Following-channels.php" class="nav-items">
+            <i class="fa-solid fa-photo-film"></i>
+            <div class="nav-items-title">Libary</div>
+        </a>
+        <!-- subcribed -->
+        <a href="../../Views/Video/Following-channels.php" class="nav-items">
+            <i class="fa-solid fa-circle-nodes"></i>
+            <div class="nav-items-title">Following Channels</div>
+        </a>
+        <!-- history -->
+        <a href="../../Views/Video/History.php" class="nav-items">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div class="nav-items-title">History</div>
+        </a>
+        <!-- like videos -->
+        <a href="../../Views/Video/Favorite-videos.php" class="nav-items">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <div class="nav-items-title">Favorite videos</div>
+        </a>
+        <!-- My list -->
+        <a href="../../Views/Video/My-list.php" class="nav-items">
+            <i class="fa-solid fa-video"></i>
+            <div class="nav-items-title">My list</div>
+        </a>
+
+        <!-- MANAGER -->
+        <div class="nav-title">
+            Manager
+        </div>
+        <div class="stick"></div>
+        <!-- MANAGER's elements -->
+        <!-- profile -->
+        <a href="../../Views/User/Profile.php" class="nav-items">
+            <i class="fa-solid fa-address-card"></i>
+            <div class="nav-items-title">Profile</div>
+        </a>
+        <!-- uploads -->
+        
+        <a href="../../Views/User/UploadVideo.php" class="nav-items">
+            <i class="fa-solid fa-upload"> </i>
+            <div class="nav-items-title">Uploads</div>
+        </a>
+    </div>
+
             <!-- main slider -->
             <div class="nav-title">
                 Si-zu-ka

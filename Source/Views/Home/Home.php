@@ -1,8 +1,8 @@
 <?php
-    if(!isset($_COOKIE["username"])){
-        header("Location: SignIn.php");
-        exit();
-    }
+    // if(!isset($_COOKIE["username"])){
+    //     header("Location: ../SignIn_SignUp/SignIn.php");
+    //     exit();
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- logo header -->
-    <link rel="shortcut icon" href="../Source/images/logo.png" />
+    <link rel="shortcut icon" href="../../assets/images/logo.png" />
     <!-- css -->
-    <link rel="stylesheet" href="../Source/CSS/style_home.css">
-    <link rel="stylesheet" href="../Source/CSS/style_common.css">
-    <link rel="stylesheet" href="../Source/CSS/style_form_video.css">
+    <link rel="stylesheet" href="../../assets/css/style_home.css">
+    <link rel="stylesheet" href="../../assets/css/style_common.css">
+    <link rel="stylesheet" href="../../assets/css/style_form_video.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -40,7 +40,7 @@
         <!-- menu -->
         <div class="navbar-main-menu "><i class="fa-solid fa-bars"></i></div>
         <!-- logo -->
-        <a href="#" class="navbar-main-logo"><img src="images/logo.png" alt=""></a>
+        <a href="../../Views/Home/Home.php" class="navbar-main-logo"><img src="../../assets/images/logo.png" alt=""></a>
         <!-- search -->
         <div class="search-box">
             <!-- search input -->
@@ -67,37 +67,37 @@
         <div class="stick"></div>
         <!-- MAIN's elements -->
         <!-- home -->
-        <a href="../Source/Home.html" class="nav-items">
+        <a href="../../Views/Home/Home.php" class="nav-items">
             <i class="fa-solid fa-house"></i>
             <div class="nav-items-title">Home</div>
         </a>
         <!-- trending -->
-        <a href="../Source/Trending.html" class="nav-items">
+        <a href="../../Views/Video/Trending.php" class="nav-items">
             <i class="fa-solid fa-fire-flame-curved"></i>
             <div class="nav-items-title">Trending</div>
         </a>
         <!-- libary -->
-        <a href="../Source/Libary.html" class="nav-items">
+        <a href="../../Views/Video/Following-channels.php" class="nav-items">
             <i class="fa-solid fa-photo-film"></i>
             <div class="nav-items-title">Libary</div>
         </a>
         <!-- subcribed -->
-        <a href="../Source/Following-channels.html" class="nav-items">
+        <a href="../../Views/Video/Following-channels.php" class="nav-items">
             <i class="fa-solid fa-circle-nodes"></i>
             <div class="nav-items-title">Following Channels</div>
         </a>
         <!-- history -->
-        <a href="../Source/History.html" class="nav-items">
+        <a href="../../Views/Video/History.php" class="nav-items">
             <i class="fa-solid fa-clock-rotate-left"></i>
             <div class="nav-items-title">History</div>
         </a>
         <!-- like videos -->
-        <a href="../Source/Favorite-videos.html" class="nav-items">
+        <a href="../../Views/Video/Favorite-videos.php" class="nav-items">
             <i class="fa-solid fa-thumbs-up"></i>
             <div class="nav-items-title">Favorite videos</div>
         </a>
         <!-- My list -->
-        <a href="../Source/My-list.html" class="nav-items">
+        <a href="../../Views/Video/My-list.php" class="nav-items">
             <i class="fa-solid fa-video"></i>
             <div class="nav-items-title">My list</div>
         </a>
@@ -109,12 +109,13 @@
         <div class="stick"></div>
         <!-- MANAGER's elements -->
         <!-- profile -->
-        <a href="../Source/Profile.html" class="nav-items">
+        <a href="../../Views/User/Profile.php" class="nav-items">
             <i class="fa-solid fa-address-card"></i>
             <div class="nav-items-title">Profile</div>
         </a>
         <!-- uploads -->
-        <a href="../Source/UploadVideo.html" class="nav-items">
+        
+        <a href="../../Views/User/UploadVideo.php" class="nav-items">
             <i class="fa-solid fa-upload"> </i>
             <div class="nav-items-title">Uploads</div>
         </a>
@@ -127,11 +128,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -145,11 +146,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -163,11 +164,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -181,11 +182,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -199,11 +200,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -217,11 +218,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -235,11 +236,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -253,11 +254,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -271,11 +272,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -289,11 +290,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
@@ -307,11 +308,11 @@
 
         <div class="form-video">
             <!-- link chanel of account -->
-            <a href="#"><img src="../Source/images/Thumbnails-img.jpg" alt=""></a>
+            <a href="#"><img src="../../assets/images/Thumbnails-img.jpg" alt=""></a>
 
             <div class="summary-video">
                 <!-- click move to chanel -->
-                <a href="#"><img src="../Source/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
+                <a href="#"><img src="../../assets/images/none-avt.jpg" title="name-account" alt="" class="icon-user"></a>
                 <div class="inf-video">
                     <h1 class="content-video">Phân tích cốt truyện: MY FRIEND PEDRO - Sát Thủ Tưởng Tượng</h1>
                     <!-- click move to chanel -->
