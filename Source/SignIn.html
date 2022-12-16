@@ -6,57 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <!-- logo header -->
     <link rel="shortcut icon" href="images/logo.png" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <!-- css -->
-<<<<<<< HEAD:HTML/SignIn.html
-    <link rel="stylesheet" href="../CSS/style.css">
-=======
     <link rel="stylesheet" href="css/style.css">
->>>>>>> fb6dbd67e75e057c1366655bd1358a88831281f2:Source/SignIn.html
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
     <!-- icon -->
-    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/198f11ff77.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <main>
         <div id="sign-in-board">
-            <form action="SignIn.php" class="display-flex-center">
+            <form class="display-flex-center">
                 <h1 class="main-title">Sign in</h1>
                 <div class="stick"></div>
+
                 <!-- username -->
                 <div class="input-box">
-                    
-                    <input type="text"  name="user-name" id="user-name" class="form-input" placeholder=" " />
-                    <label class="input-label"><i class="fa-solid fa-user "></i> Username</label>
-                    <span class="error-message">Can't find user</span>
-                    
+                    <input type="text"  name="username" id="username" class="form-input" placeholder=" " required/>
+                    <label class="input-label" for="username"><i class="fa-solid fa-user "></i> Username</label>
                 </div>
+
                 <!-- password -->
                 <div class="input-box">
-                    
-                    <input type="password"  name="password" id="password" class="form-input" placeholder=" "/>
-                    <label class="input-label"><i class="fa-solid fa-key "></i> Password</label>
-                    <span class="error-message">Wrong password</span>
-
+                    <input type="password"  name="password" id="password" class="form-input" placeholder=" " required/>
+                    <label class="input-label" for="password"><i class="fa-solid fa-key "></i> Password</label>
                 </div>
+
+                <!-- Show password -->
                 <div class="show-password-check-box">
                     <input type="checkbox" id="show-password" name="show-password">
-                    Show password
-                    <i class="fa-solid fa-eye icon-background"></i>
+                    <label for="show-password">Show password <i class="fa-solid fa-eye icon-background"></i></label>
                 </div>
+
                 <!-- submit btn -->
                 <input type="submit" name="sign-in" class="btn sign-in-btn" value="Sign in">
-                <!-- remember me -->
                 <br>
-                <input type="checkbox" name="remember-me" id="remember-me" > Remember me
 
                 <!-- sign up -->
                 <footer>
                     <h5 class="footer-title">Forgot your password !</h5>
                     <p class="footer-desc">If you don't have account, just sign up now !</p>
                     <a href="SignUp.html" class="btn second-btn" style="top: 12px;left: 25%;">Create account</a>
+
+                    <!-- Message -->
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                 </footer>
             </form>
         </div>
@@ -64,17 +74,13 @@
     </main>
     <script>
         const password = document.querySelector("input[name=password]");
-        const confirm_password = document.querySelector("input[name=confirm-password]");
         const show_password = document.getElementById("show-password");
         // show pass - error
-        show_password.addEventListener("click",()=>{
-            if(this.value = "ok"){
-                password.type="text";
-                confirm_password.type="text";
-
+        $(show_password).change(function(){
+            if(password.type === "password"){
+                password.type = "text";
             }else{
-                password.type="password";
-                confirm_password.type="password";
+                password.type = "password";
             }
         })
     </script>

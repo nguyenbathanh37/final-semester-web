@@ -1,7 +1,7 @@
 
  /* phone */
  @media only screen  and (max-width: 1080px)  {
-  .navbar {
+  .navbar-main {
     width: 100vw;
     z-index: 999 ;
     min-width: 500px;
@@ -16,7 +16,7 @@
 
 }
 
-.navbar-menu {
+.navbar-main-menu {
     position: absolute;
     left: 0;
     margin: 2rem;
@@ -27,14 +27,14 @@
 
 
 
-.navbar-logo {
+.navbar-main-logo {
     position: absolute;
     left: 5rem;
     width: 6rem;
     height: 3.5rem;
 }
 
-.navbar-logo img {
+.navbar-main-logo img {
     object-fit: contain;
     width: 100%;
     height: 100%;
@@ -98,8 +98,8 @@
 /* btn */
 
 
-/* navbar slider */
-.navbar-slider{
+/* navbar-main slider */
+.navbar-main-slider{
   z-index: 999;
   position: fixed !important;
   top: 10vh;
@@ -190,7 +190,7 @@
       background-position: 400%;
   }
 }
-.navbar-slider .toggle > i{
+.navbar-main-slider .toggle > i{
   cursor: pointer;
   position: absolute;
   color: #fff;
@@ -210,21 +210,21 @@
 
 }
 /* open the slider */
-.navbar-slider.open{
+.navbar-main-slider.open{
   width: 360px ;
 }
-.navbar-slider.open .nav-title{
+.navbar-main-slider.open .nav-title{
   opacity: 1;
   transition: .4s ease;
   transition-delay: .2s;
 }
-.navbar-slider.open .nav-items .nav-items-title{
+.navbar-main-slider.open .nav-items .nav-items-title{
   opacity: 1;
   pointer-events: visible;
   transition: .4s ease;
   transition-delay: .2s;
 }
-.navbar-slider.open .stick{
+.navbar-main-slider.open .stick{
   display: flex;
   transition: .4s ease;
 
@@ -238,7 +238,7 @@
 
 /* desktop */
 @media only screen and (max-width: 2560px) and (min-width: 1090px){
-  .navbar {
+  .navbar-main {
     width: 100vw;
     z-index: 999;
     min-width: 500px;
@@ -252,7 +252,7 @@
 
 }
 
-.navbar-menu {
+.navbar-main-menu {
     position: absolute;
     left: 0;
     margin: 2rem;
@@ -263,14 +263,14 @@
 
 
 
-.navbar-logo {
+.navbar-main-logo {
     position: absolute;
     left: 5rem;
     width: 6rem;
     height: 3.5rem;
 }
 
-.navbar-logo img {
+.navbar-main-logo img {
     object-fit: contain;
     width: 100%;
     height: 100%;
@@ -336,8 +336,8 @@
 /* btn */
 
 
-/* navbar slider */
-.navbar-slider{
+/* navbar-main slider */
+.navbar-main-slider{
   z-index: 999;
   position: fixed !important;
   top: 10vh;
@@ -428,7 +428,7 @@
       background-position: 400%;
   }
 }
-.navbar-slider .toggle > i{
+.navbar-main-slider .toggle > i{
   cursor: pointer;
   position: absolute;
   color: #fff;
@@ -448,21 +448,21 @@
 
 }
 /* open the slider */
-.navbar-slider.open{
+.navbar-main-slider.open{
   width: 360px ;
 }
-.navbar-slider.open .nav-title{
+.navbar-main-slider.open .nav-title{
   opacity: 1;
   transition: .4s ease;
   transition-delay: .2s;
 }
-.navbar-slider.open .nav-items .nav-items-title{
+.navbar-main-slider.open .nav-items .nav-items-title{
   opacity: 1;
   pointer-events: visible;
   transition: .4s ease;
   transition-delay: .2s;
 }
-.navbar-slider.open .stick{
+.navbar-main-slider.open .stick{
   display: flex;
   transition: .4s ease;
 }
