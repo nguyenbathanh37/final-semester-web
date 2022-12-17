@@ -11,6 +11,8 @@
     justify-content: space-around;
     background: rgb(255,196,164);
     background: linear-gradient(90deg, rgba(255,196,164,1) 0%, rgba(245,225,164,1) 35%, rgba(137,222,240,1) 100%);
+    
+    
     position: fixed;
     
 
@@ -79,11 +81,16 @@
   margin-left: 12px;
 }
 
+.change-theme-btn{
+  position: absolute;
+  right: 13rem;
+  cursor: pointer;
+}
 
 .log-up-btn {
     position: absolute;
-    right: 4rem ;
-    margin: 3rem;
+    right: 7rem ;
+    margin-left: 3rem;
 }
 
 
@@ -317,7 +324,11 @@
 }
 
 
-
+.change-theme-btn{
+  position: absolute;
+  right: 13rem;
+  cursor: pointer;
+}
 
 .log-up-btn {
     position: absolute;

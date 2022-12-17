@@ -24,12 +24,12 @@
 </head>
 
 <body>
-       <!-- navbar -->
-       <div class="navbar-main">
+        <!-- navbar -->
+        <div class="navbar-main">
         <!-- menu -->
         <div class="navbar-main-menu "><i class="fa-solid fa-bars"></i></div>
         <!-- logo -->
-        <a href="#" class="navbar-main-logo"><img src="../../assets/images/logo.png" alt=""></a>
+        <a href="../../Views/Home/Home.php" class="navbar-main-logo"><img src="../../assets/images/logo.png" alt=""></a>
         <!-- search -->
         <div class="search-box">
             <!-- search input -->
@@ -110,65 +110,6 @@
         </a>
     </div>
 
-            <!-- main slider -->
-            <div class="nav-title">
-                Si-zu-ka
-            </div>
-            <div class="stick"></div>
-            <!-- MAIN's elements -->
-                <!-- home -->
-                <a href="../Source/Home.html" class="nav-items">
-                    <i class="fa-solid fa-house"></i>
-                    <div  class="nav-items-title">Home</div>
-                </a>
-                <!-- trending -->
-                <a href="../Source/Trending.html" class="nav-items">
-                    <i class="fa-solid fa-fire-flame-curved"></i>
-                    <div  class="nav-items-title">Trending</div>
-                </a>
-                 <!-- libary -->
-                <a href="../Source/Libary.html" class="nav-items">
-                    <i class="fa-solid fa-photo-film"></i>
-                    <div  class="nav-items-title">Libary</div>
-                </a>
-                 <!-- subcribed -->
-                <a href="../Source/Following-channels.html" class="nav-items">
-                    <i class="fa-solid fa-circle-nodes"></i>
-                    <div  class="nav-items-title">Following Channels</div>
-                </a>
-                 <!-- history -->
-                <a href="../Source/History.html" class="nav-items">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <div  class="nav-items-title">History</div>
-                </a>
-                 <!-- like videos -->
-                <a href="../Source/Favorite-videos.html" class="nav-items">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <div  class="nav-items-title">Favorite videos</div>
-                </a>
-                <!-- My list -->
-                <a href="../Source/My-list.html" class="nav-items">
-                    <i class="fa-solid fa-video"></i>
-                    <div  class="nav-items-title">My list</div>
-                </a>
-               
-            <!-- MANAGER -->
-            <div class="nav-title">
-                Manager
-            </div>
-            <div class="stick"></div>
-            <!-- MANAGER's elements -->
-                <!-- profile -->
-                <a href="../Source/Profile.html" class="nav-items">
-                    <i class="fa-solid fa-address-card"></i>
-                    <div  class="nav-items-title">Profile</div>
-                </a>
-                <!-- uploads -->
-                <a href="../Source/UploadVideo.html" class="nav-items">
-                    <i class="fa-solid fa-upload"> </i>
-                    <div  class="nav-items-title">Uploads</div>
-                </a>
-        </div>
     <!-- upload body -->
     <div class="upload-body">
         <!-- title upload -->
@@ -181,7 +122,8 @@
         <!-- setting -->
         <div class="setting">
            
-           <div class="left-side-setting">
+        <div class="responsive-layout">
+        <div class="left-side-setting">
             <h2>Setting</h2>
              <!-- title -->
              <label for="title-video">Title</label>
@@ -223,12 +165,13 @@
                 <button class="button-6 " id="thumbnails-upload-button">Custom Thumbnails <i class="fa-solid fa-wrench icon" ></i> </button>
                 <!-- thumnails uploaded -->
                 <div class="thumbnails">
-                    <img src="images/Thumbnails-img.jpg" alt="Thumbnails" id="sample-img">
+                    <img src="../../assets/images/Thumbnails-img.jpg" alt="Thumbnails" id="sample-img">
                 </div>
                 <!-- submit button -->
                 <button type="submit" name="submit" class="btn-main save-for-all">Save for all</button>
            </div>
             
+        </div>
 
 
         </div>
@@ -260,7 +203,7 @@
         $('#addVideosBtn').click(function() {
             // hide the upload btn
             $('.upload-btn').css('display','none')
-            $('.setting').css('display','flex')
+            $('.setting').css('display','block')
 
             
 

@@ -134,7 +134,7 @@
                 <button class="button-6" id="avt-upload-button">Choose file to upload <i class="fa-solid fa-wrench icon" ></i> </button>
                 <!-- avt uploaded -->
                 <div class="avt-show" style="margin: 12px 0;">
-                    <img style="border-radius: 50%" src="../Source/images/none-avt.jpg" alt="avt" id="sample-img">
+                    <img style="border-radius: 50%" src="../../assets/images/none-avt.jpg" alt="avt" id="sample-img">
                 </div>
             </div>
 

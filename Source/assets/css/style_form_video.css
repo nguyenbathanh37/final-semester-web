@@ -8,7 +8,12 @@
     .navbar-slider{
         position: absolute;
     }
-    
+    .contain-video-title{
+        position: relative;
+        top: 11vh;
+        left: 9vw;
+
+    }
     .contain-video{
         padding-top: 12vh;
         display: grid;
@@ -67,6 +72,7 @@
     
     .contain-video .form-video .summary-video{
         display: flex;
+        padding: 5px;
     }
     
     .contain-video .form-video .summary-video a img{
@@ -94,17 +100,23 @@
     .contain-video .form-video .summary-video .inf-video .name-user{
         display: inline-block;
     }
-  }
+}
  
   /* phone */
   @media screen and (max-width: 1080px) {
     .body-web{
         display: flex;
     }
-    
+    .contain-video-title{
+        position: relative;
+        top: 11vh;
+        text-align: center;
+
+    }
     .navbar-slider{
         position: absolute;
     }
+    
     
     .contain-video{
         padding-top: 12vh;
@@ -137,6 +149,7 @@
     
     .contain-video .form-video .summary-video{
         display: flex;
+        padding: 5px;
     }
     
     .contain-video .form-video .summary-video a img{
