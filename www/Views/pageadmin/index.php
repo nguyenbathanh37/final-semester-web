@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,52 +9,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- logo header -->
-    <link rel="shortcut icon" href="./img/logo.png" />
+    <link rel="shortcut icon" href="../../assets/images/logo.png" />
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- icon -->
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/198f11ff77.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <main>
         <div id="sign-in-board">
-            <form action="SignIn.php" class="display-flex-center">
-                <h1 class="main-title">Sign in</h1>
+            <form action="processLLogin.php" method="POST" class="display-flex-center">
+                <h1 class="main-title">Sign in ADMIN</h1>
                 <div class="stick"></div>
+                <div>
+                    <Strong>User: admin</Strong>
+                    <br>
+                    <Strong>Password: admin</Strong>
+
+                </div>
                 <!-- username -->
                 <div class="input-box">
                     
-                    <input type="text"  name="user-name" id="user-name" class="form-input" placeholder=" " />
-                    <label class="input-label"><i class="fa-solid fa-user "></i> Username</label>
-                    <span class="error-message">Can't find user</span>
+                    <input type="text"  name="admin-name" id="user-name" class="form-input" placeholder=" " />
+                    <label class="input-label"><i class="fa-solid fa-user "></i> Username ADMIN</label>
+                    <span class="error-message">Can't find ADMIN</span>
                     
                 </div>
                 <!-- password -->
                 <div class="input-box">
                     
-                    <input type="password"  name="password" id="password" class="form-input" placeholder=" "/>
+                    <input type="password"  name="passwordadmin" id="password" class="form-input" placeholder=" "/>
                     <label class="input-label"><i class="fa-solid fa-key "></i> Password</label>
                     <span class="error-message">Wrong password</span>
 
                 </div>
                 <div class="show-password-check-box">
                     <input type="checkbox" id="show-password" name="show-password">
-                    Show password
+                    Show password ADMIN
                     <i class="fa-solid fa-eye icon-background"></i>
                 </div>
                 <!-- submit btn -->
-                <input type="submit" name="sign-in" class="btn sign-in-btn" value="Sign in">
+                <input type="submit" name="sign-inadmin" class="btn sign-in-btn" value="Sign in ADMIN">
                 <!-- remember me -->
                 <br>
-                <input type="checkbox" name="remember-me" id="remember-me" > Remember me
+                
 
-                <!-- sign up -->
-                <footer>
-                    <h5 class="footer-title">Forgot your password !</h5>
-                    <p class="footer-desc">If you don't have account, just sign up now !</p>
-                    <a href="./SignUp.html" class="btn second-btn" style="top: 12px;left: 25%;">Create account</a>
-                </footer>
+        
             </form>
         </div>
 

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['user'])) {
+    header('Location: ../../index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- logo header -->
-    <link rel="shortcut icon" href="./img/logo.png" />
+    <link rel="shortcut icon" href="../../assets/images/logo.png" />
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
     <!-- icon -->
     <script src="https://kit.fontawesome.com/198f11ff77.js" crossorigin="anonymous"></script>
 
@@ -25,16 +35,14 @@
                     <div class="stick"></div>
                     <!-- fullName -->
                     <div class="input-box">
-    
-                        <input type="text" name="full-name" id="user-name" class="form-input" placeholder=" " />
+                        <input type="text" name="full-name" id="user-name" class="form-input" placeholder=" "/>
                         <label class="input-label"><i class="fa-solid fa-file-signature"></i> Full name</label>
                         <span class="error-message">Please input the name</span>
-    
                     </div>
                     <!-- username -->
                     <div class="input-box">
     
-                        <input type="text" name="user-name" id="user-name" class="form-input" placeholder=" " />
+                        <input type="text" name="user-name" id="user-name" class="form-input" placeholder=" "/>
                         <label class="input-label"><i class="fa-solid fa-user icon-background"></i> Username</label>
                         <span class="error-message">Please input username</span>
     
@@ -42,7 +50,7 @@
                     <!-- email -->
                     <div class="input-box">
     
-                        <input type="email" name="email" id="email" class="form-input" placeholder=" " />
+                        <input type="email" name="email" id="email" class="form-input" placeholder=" "/>
                         <label class="input-label"><i class="fa-solid fa-envelope"></i> Email</label>
                         <span class="error-message">Please input email</span>
     
@@ -50,7 +58,7 @@
                     <!-- password -->
                     <div class="input-box">
     
-                        <input type="password"  name="password" id="password" class="form-input" placeholder=" " />
+                        <input type="password"  name="password" id="password" class="form-input" placeholder=" "/>
                         <label class="input-label"><i class="fa-solid fa-key"></i> Password</label>
                         <span class="error-message">Please input </span>
                     </div>
@@ -58,7 +66,7 @@
                     <!-- confirm password -->
                     <div class="input-box">
     
-                        <input type="password" name="confirm-password" id="confirm-password" class="form-input" placeholder=" " />
+                        <input type="password" name="confirm-password" id="confirm-password" class="form-input" placeholder=" "/>
                         <label class="input-label"><i class="fa-sharp fa-solid fa-lock"></i> Confirm password</label>
                         <span class="error-message">Please input </span>
     
@@ -73,7 +81,7 @@
                 <div class="right-side">
                     <h2 class="right-side-title">Welcome !</h2>
                     <input type="submit" name="sign-up" value="Create account" class="btn">
-                    <p class="right-side-desc">Already have an account ? <a href="./SignIn.html" class="btn second-btn " style="margin-left: 12px">Log in.</a></p>
+                    <p class="right-side-desc">Already have an account ? <a href="./SignIn.php" class="btn second-btn " style="margin-left: 12px">Log in.</a></p>
                     <div class="circles">
                         <div></div>
                         <div></div>
