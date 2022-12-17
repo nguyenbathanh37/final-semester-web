@@ -28,9 +28,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- loading page -->
-    <link rel="stylesheet" href="../CSS/Page-loading.css">
-    <script src="../Javascript/Page-loading.js"></script>
+    
+
 
 </head>
 
@@ -72,7 +71,7 @@
         <div class="stick"></div>
         <!-- MAIN's elements -->
         <!-- home -->
-        <a href="../../Views/Home/Home.php" class="nav-items">
+        <a href="../../Views/Home/Home.php" class="nav-items active">
             <i class="fa-solid fa-house"></i>
             <div class="nav-items-title">Home</div>
         </a>
@@ -82,7 +81,7 @@
             <div class="nav-items-title">Trending</div>
         </a>
         <!-- libary -->
-        <a href="../../Views/Video/Following-channels.php" class="nav-items">
+        <a href="../../Views/Video/Library.php" class="nav-items ">
             <i class="fa-solid fa-photo-film"></i>
             <div class="nav-items-title">Libary</div>
         </a>
@@ -329,7 +328,23 @@
             </div>
         </div>
 
+        
+
     </div>
+    <!-- pagination  -->
+    <nav aria-label="Page navigation example" style="margin-top: 15vh">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 
 
     <script>
@@ -353,74 +368,15 @@
             })
         }
         )
-        // change theme
-        const dark =  document.querySelector('.dark-theme')
-        const light =  document.querySelector('.light-theme')
-        const theme =  document.querySelector('.change-theme-btn')
-
-        //
-
-       dark.addEventListener('click',function(){
-            document.body.style.background='black'
-            dark.classList.add('d-none')
-            light.classList.remove('d-none')
-            dark.style.color='black'
-
-
-            //  custome body
-            document.querySelectorAll('.form-video').forEach(function(form){
-                form.style.background='black'
-            })
-            document.querySelectorAll('.inf-video').forEach(function(inf){
-                inf.style.color='white'
-            })
-            document.querySelector('.contain-video-title').style.color='white'
-
-            
-            // custome navbar
-            document.querySelector('.navbar-main-menu i').style.color='white'
-            document.querySelector('.navbar-main').style.background='rgb(30,30,30)'
-            document.querySelector('.navbar-main').style.background='linear-gradient(90deg, rgba(30,30,30,1) 22%, rgba(60,21,22,1) 34%, rgba(146,22,24,1) 55%, rgba(75,44,59,1) 98%)'
-            document.querySelector('.search-box input').style.background='#1e1e1e'
-            document.querySelector('.search-box input').style.color='white'
-            
-
-
-
-
-
-        }) 
-
-       light.addEventListener('click',function(){
-            document.body.style.background='white'
-            light.classList.add('d-none')
-             dark.classList.remove('d-none')
-             light.style.color='white'
-
-            //  custome body
-             document.querySelectorAll('.form-video').forEach(function(form){
-                form.style.background='white'
-            })
-            document.querySelectorAll('.inf-video').forEach(function(inf){
-                inf.style.color='black'
-            })
-            document.querySelector('.contain-video-title').style.color='black'
-
-
-            // custome navbar
-            document.querySelector('.navbar-main-menu i').style.color='black'
-            document.querySelector('.navbar-main').style.background='rgb(255,196,164)'
-            document.querySelector('.navbar-main').style.background='linear-gradient(90deg, rgba(255,196,164,1) 0%, rgba(245,225,164,1) 35%, rgba(137,222,240,1) 100%)'
-            document.querySelector('.search-box input').style.background='white'
-            document.querySelector('.search-box input').style.color='black'
-
-            
-
-        }) 
+        
 
 
 
     </script>
 </body>
-
+    <!-- loading page -->
+    <link rel="stylesheet" href="../../assets/css/Page-loading.css">
+    <script src="../../assets/scripts/Page-loading.js"></script>
+    <!-- change theme color -->
+    <script src="../../assets/scripts/Change-theme-background-color-video.js"></script>
 </html>

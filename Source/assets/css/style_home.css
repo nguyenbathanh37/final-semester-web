@@ -549,28 +549,5 @@
     padding: 0.25em 0.75em;
   }
 }
-/* panigation */
-.pagination{
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.page-item{
-  padding: 12px;
-  border-radius: 12px;
-}
-.page-item:hover{
-  background-color: rgb(120, 120, 214);
-  color: #fff;
 
-}
-.disabled-item{
-  opacity: 0.5;
-  
-}
-.page-link{
-
-}
 

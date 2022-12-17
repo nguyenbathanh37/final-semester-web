@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History</title>
+    <title>Library</title>
     <!-- logo header -->
     <link rel="shortcut icon" href="../../assets/images/logo.png" />
     <!-- css -->
@@ -70,7 +70,7 @@
         <div class="stick"></div>
         <!-- MAIN's elements -->
         <!-- home -->
-        <a href="../../Views/Home/Home.php" class="nav-items ">
+        <a href="../../Views/Home/Home.php" class="nav-items">
             <i class="fa-solid fa-house"></i>
             <div class="nav-items-title">Home</div>
         </a>
@@ -80,7 +80,7 @@
             <div class="nav-items-title">Trending</div>
         </a>
         <!-- libary -->
-        <a href="../../Views/Video/Library.php" class="nav-items ">>
+        <a href="../../Views/Video/Library.php" class="nav-items active">
             <i class="fa-solid fa-photo-film"></i>
             <div class="nav-items-title">Libary</div>
         </a>
@@ -90,12 +90,12 @@
             <div class="nav-items-title">Following Channels</div>
         </a>
         <!-- history -->
-        <a href="../../Views/Video/History.php" class="nav-items active">
+        <a href="../../Views/Video/History.php" class="nav-items">
             <i class="fa-solid fa-clock-rotate-left"></i>
             <div class="nav-items-title">History</div>
         </a>
         <!-- like videos -->
-        <a href="../../Views/Video/Favorite-videos.php" class="nav-items">
+        <a href="../../Views/Video/Favorite-videos.php" class="nav-items ">
             <i class="fa-solid fa-thumbs-up"></i>
             <div class="nav-items-title">Favorite videos</div>
         </a>
@@ -127,7 +127,7 @@
 
     </div>
     <!-- conatin videos -->
-    <h3 class="contain-video-title">History</h3>
+    <h3 class="contain-video-title">Library</h3>
     <div class="contain-video">
         <div class="form-video">
             <!-- link chanel of account -->
