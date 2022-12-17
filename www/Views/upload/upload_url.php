@@ -44,7 +44,7 @@
             $pos = strpos($url, 'http');
             $target_file_thumbails = "/upload/thumbnails/" . basename($_FILES["imgthumbnails"]["name"]);
 
-            $target_dir_thumbails = "./thumbnails/";
+            $target_dir_thumbails = "../../assets/thumbnails/";
             $target_file_thumbails_ =  $target_dir_thumbails . basename($_FILES["imgthumbnails"]["name"]);
             $vis = 1;
         if(isset($_POST['radiovis'])){
@@ -61,7 +61,7 @@
             //     $query = "INSERT INTO `video` (`username`, `namevideo`, `chanel`, `dayupload`,`address`,`active`) VALUES
             // ('nguyenbathanh1','$title','nguyenbathanh1',CURRENT_TIMESTAMP,'$url',1);";
 
-            $target_file_thumbails =  '..' . $target_file_thumbails;
+                $target_file_thumbails = 'Views/thumbnails/' . basename($_FILES["imgthumbnails"]["name"]);
 
             if(move_uploaded_file($_FILES['imgthumbnails']['tmp_name'],$target_file_thumbails_) ){
                 $query = "INSERT INTO `video` (`namevideo`, `view`, `dayupload`,`thumbnail`,`mode`, `username`, `link`) VALUES

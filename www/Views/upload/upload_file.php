@@ -8,8 +8,8 @@ if(isset($_POST['submitFILE'])){
     if (isset($_FILES['fileToUpload']['name']) && $_FILES['imgthumbnails']['name'] != '' && $_FILES['fileToUpload']['name'] != '' && isset($_POST['title_file']) && !empty($_POST['title_file'])) {
         $title = $_POST['title_file'];
         $maxsize = 524288000;
-        $target_dir = "./videos/";
-        $target_dir_thumbails = "./thumbnails/";
+        $target_dir = "../../assets/videos/";
+        $target_dir_thumbails = "../../assets/thumbnails/";
         $target_file_thumbails =  $target_dir_thumbails . basename($_FILES["imgthumbnails"]["name"]);
         $target_file =  $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $vis = 1;
@@ -41,8 +41,8 @@ if(isset($_POST['submitFILE'])){
             if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'],$target_file) && move_uploaded_file($_FILES['imgthumbnails']['tmp_name'],$target_file_thumbails) ){
                 echo 5;
             // Insert record
-            $target_file_temp = "../upload/videos/" . basename($_FILES["fileToUpload"]["name"]);
-            $target_file_thumbails = "../upload/thumbnails/" . basename($_FILES["imgthumbnails"]["name"]);
+            $target_file_temp = 'Views/videos/'. basename($_FILES["fileToUpload"]["name"]);
+            $target_file_thumbails = 'Views/thumbnails/' . basename($_FILES["imgthumbnails"]["name"]);
             $query = "INSERT INTO `video` (`namevideo`, `view`, `dayupload`,`thumbnail`,`mode`, `username`, `link`) VALUES
             ('$title',0,CURRENT_TIMESTAMP,'$target_file_thumbails','$vis','nguyenbathanh1','$target_file_temp');";
             mysqli_query($conn,$query);

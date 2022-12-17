@@ -271,11 +271,11 @@ $conn->close();
  
   <H2>Set the thumbails.</H2>
   <div>
-  <input type="file" name="imgthumbnails"  id="thumbnails-img-src1" accept=" image/*" style="display: none;">
+  <input type="file"  name="imgthumbnails"   id="thumbnails-img-src1" accept=" image/*" style="display: none;">
                 <div class="button-6  btn btn-outline-info btn-sm" id="thumbnails-upload-button1">Custom Thumbnails <i class="fa-solid fa-wrench icon" ></i> </div>
                 <!-- thumnails uploaded -->
                 <div class="thumbnails1">
-                    <img src="" alt="Thumbnails" id="sample-img1">
+                    <img src="" alt="Thumbnails" id="sample-img">
                 </div>
   </div>
                                 <button type="submit" name="submitURL" class="btn btn-danger btn-sm">Upload with URL</button>
@@ -346,42 +346,10 @@ $conn->close();
             `
             $('.thumbnails').append(thumbnailImg);  
             };
-    </script>
-</body>
- 
-</html>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/main.js"></script> <!-- Sử dụng link tuyệt đối tính từ root, vì vậy có dấu / đầu tiên -->
-    <script>
-        $(document).ready(() => {
-  // upload thumbnails
-  $('#thumbnails-upload-button').click(function() {
-            // hide the upload btn
-            $('#sample-img').css('display','none')
-            if($('#thumbnails-img')){
-                $('#thumbnails-img').remove()
-            }
-            $(this).parents().find('#thumbnails-img-src').click();
-        });
- 
-            document.getElementById('thumbnails-img-src').onchange = e => {
-            const file = e.target.files[0];
-            //src of img file
-            const url = URL.createObjectURL(file);
- 
-            //create img
-            const thumbnailImg = `
-                <img src="${url}" alt="Thumbnails" id="thumbnails-img">
-            `
-            $('.thumbnails').append(thumbnailImg);  
-            };
- 
- 
- 
-            $('#thumbnails-upload-button1').click(function() {
+
+             // upload thumbnails
+        $('#thumbnails-upload-button1').click(function() {
             // hide the upload btn
             $('#sample-img1').css('display','none')
             if($('#thumbnails-img1')){
@@ -401,8 +369,7 @@ $conn->close();
             `
             $('.thumbnails1').append(thumbnailImg);  
             };
-});
- 
- 
- 
+    </script>
+</body>
+
      
