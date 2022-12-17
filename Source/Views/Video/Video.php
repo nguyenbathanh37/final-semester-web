@@ -1,3 +1,24 @@
+<?php
+    require_once "../../connectdb.php";
+    // $username = $_COOKIE["username"];
+    $id_video = 31;
+    $sql = "SELECT v.*, u.fullname, u.img FROM feature f, video v, user u WHERE f.id_video = v.id_video and v.username = u.username and v.id_video = $id_video";
+    $result = mysqli_query($conn, $sql);
+    $data = array();
+    if($result->num_rows > 0){
+        while($r = $result->fetch_assoc()){
+            $view = (int)$r["view"];
+            $view_format = '';
+            while($view > 1000){
+                $remain = $view%1000;
+                $view = (int)($view/1000);
+                $view_format = ','.$remain.$view_format;
+            }
+            $view_format = $view.$view_format;
+            $data[] = ["id_video"=>$r["id_video"],"namevideo"=>$r["namevideo"],"view"=>$view_format,"dayupload"=>$r["dayupload"],"thumbnail"=>$r["thumbnail"], "mode"=>$r["mode"], "fullname"=>$r["fullname"], "link"=>$r["link"], "avt"=>$r["img"]];
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,16 +132,13 @@
     <div class="wrapper" id="wrapper" style="display: flex;">
         <div class="left-side">
             <div class="video-wrapper">
-                <video controls style="width: 100%; height: 100%;">
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                </video>
+                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/psZ1g9fMfeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <!-- title video -->
-            <h3 class="video-title">This is the name of video</h3>
+            <h3 class="video-title"><?php echo $data[0]["namevideo"]; ?></h3>
             <div class="video-contact">
-                <h6 class="video-view">123 views</h6>
-                <h6 class="video-upload-date">2 days ago</h6>
+                <h6 class="video-view"><?php echo $data[0]["view"]; ?> views</h6>
+                <h6 class="video-upload-date"><?php echo $data[0]["dayupload"]; ?></h6>
                 <div class="video-like"><i class="fa-solid fa-thumbs-up"></i> <span class="number-of-liked">123</span></div>
                 <div class="video-share"> <i class="fa-solid fa-share-from-square"> </i> Share</div>
                 <div class="video-playlist-save"><i class="fa-solid fa-floppy-disk"></i> Save</div>
@@ -129,7 +147,7 @@
             <!-- user make video -->
             <div class="infomation-video-maker">
                 <img src="images/logo.png" alt="" class="video-maker-avt" style="border-radius: 50%;">
-                <h3 class="video-maker-username">username make this video</h3>
+                <h3 class="video-maker-username"><?php echo $data[0]["fullname"]; ?></h3>
                 <h5 class="subcriber"><span class="number-of-subcriber">123</span> Subcirbers</h5>
                 <button class="btn subcribe-btn " type="submit" name="subcribe">Subcribe</button>
             </div>
@@ -146,12 +164,12 @@
             <!-- create comment -->
             <div class="comment-box">
                 <a href=""><img src="images/none-avt.jpg" alt="" class="user-avt"></a>
-                <div class="body-user-comment">
-                    <h3 class="user-name">Name of user is typing this comment</h3>
+                <form class="body-user-comment" action="" method="post">
+                    <label for="comment-area"><h3 class="user-name">Name of user is typing this comment</h3></label>
                     <textarea name="comment-area" id="comment-area" cols="100" rows="" class="comment-input"></textarea>
                     <!-- comment btn -->
-                    <input type="button" name="comment" class="comment-btn button-6" value="Comment">
-                </div>
+                    <input type="submit" name="comment" class="comment-btn button-6" value="Comment">
+                </form>
             </div>
             <!-- comments of other users -->
 
