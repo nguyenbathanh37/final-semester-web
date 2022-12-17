@@ -11,7 +11,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../../assets/css/style_home.css">
     <link rel="stylesheet" href="../../assets/css/style_common.css">
-    <link rel="stylesheet" href="../../assets/css/style_video.cs">
+    <link rel="stylesheet" href="../../assets/css/style_video.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
     <!-- icon -->
@@ -271,15 +271,15 @@
     </div>
 
     <script>
-        const navbarMenu = document.querySelector('.navbar-menu');
-        const navbarSlider = document.querySelector('.navbar-slider');
+        const navbarMenu = document.querySelector('.navbar-main-menu');
+        const navbarSlider = document.querySelector('.navbar-main-slider');
         const navbarItems = document.querySelectorAll('.nav-items');
         
         // change theme BG
         const setTheme = theme => document.documentElement.className = theme;
         
         // show and hide the navbar slider
-        navbarMenu.addEventListener('click',function(){
+        navbarMenu.addEventListener('click', function () {
             navbarSlider.classList.toggle('open')
         })
         //active the items in navbar slider
