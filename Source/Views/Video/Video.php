@@ -1,23 +1,23 @@
 <?php
-    require_once "../../connectdb.php";
-    // $username = $_COOKIE["username"];
-    $id_video = 31;
-    $sql = "SELECT v.*, u.fullname, u.img FROM feature f, video v, user u WHERE f.id_video = v.id_video and v.username = u.username and v.id_video = $id_video";
-    $result = mysqli_query($conn, $sql);
-    $data = array();
-    if($result->num_rows > 0){
-        while($r = $result->fetch_assoc()){
-            $view = (int)$r["view"];
-            $view_format = '';
-            while($view > 1000){
-                $remain = $view%1000;
-                $view = (int)($view/1000);
-                $view_format = ','.$remain.$view_format;
-            }
-            $view_format = $view.$view_format;
-            $data[] = ["id_video"=>$r["id_video"],"namevideo"=>$r["namevideo"],"view"=>$view_format,"dayupload"=>$r["dayupload"],"thumbnail"=>$r["thumbnail"], "mode"=>$r["mode"], "fullname"=>$r["fullname"], "link"=>$r["link"], "avt"=>$r["img"]];
-        }
-    }
+    // require_once "../../connectdb.php";
+    // // $username = $_COOKIE["username"];
+    // $id_video = 31;
+    // $sql = "SELECT v.*, u.fullname, u.img FROM feature f, video v, user u WHERE f.id_video = v.id_video and v.username = u.username and v.id_video = $id_video";
+    // $result = mysqli_query($conn, $sql);
+    // $data = array();
+    // if($result->num_rows > 0){
+    //     while($r = $result->fetch_assoc()){
+    //         $view = (int)$r["view"];
+    //         $view_format = '';
+    //         while($view > 1000){
+    //             $remain = $view%1000;
+    //             $view = (int)($view/1000);
+    //             $view_format = ','.$remain.$view_format;
+    //         }
+    //         $view_format = $view.$view_format;
+    //         $data[] = ["id_video"=>$r["id_video"],"namevideo"=>$r["namevideo"],"view"=>$view_format,"dayupload"=>$r["dayupload"],"thumbnail"=>$r["thumbnail"], "mode"=>$r["mode"], "fullname"=>$r["fullname"], "link"=>$r["link"], "avt"=>$r["img"]];
+    //     }
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,10 +59,10 @@
             </a>
         </div>
         <!-- log up -->
-        <a href="./SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log
+        <a href="../../Views/SignIn_SignUp/SignUp.php" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log
                 up</span><span>Create Account!</span></a>
         <!-- log in -->
-        <a href="./SignIn.html" class="log-in-btn button-57"><span class="text">Log in</span><span>Exist Account
+        <a href="../../Views/SignIn_SignUp/SignIn.php" class="log-in-btn button-57"><span class="text">Log in</span><span>Exist Account
             </span></a>
     </div>
     <!-- body -->
