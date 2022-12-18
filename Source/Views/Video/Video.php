@@ -129,7 +129,7 @@
         </a>
     </div>
     <!-- video display -->
-    <div class="wrapper" id="wrapper" style="display: flex;">
+    <div class="wrapper" id="wrapper">
         <div class="left-side">
             <div class="video-wrapper">
                 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/psZ1g9fMfeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -220,7 +220,7 @@
         <div class="right-side">
             <div class="suggest-video" style="padding-top: 20px; display: flex;">
                 <a href="">
-                    <video controls style="width: 15vw; height: 18vh; border-radius: 5px;">
+                    <video controls>
                         <source src="movie.mp4" type="video/mp4">
                         <source src="movie.ogg" type="video/ogg">
                     </video>
@@ -236,7 +236,7 @@
 
             <div class="suggest-video" style="padding-top: 20px; display: flex;">
                 <a href="">
-                    <video controls style="width: 15vw; height: 18vh; border-radius: 5px;">
+                    <video controls>
                         <source src="movie.mp4" type="video/mp4">
                         <source src="movie.ogg" type="video/ogg">
                     </video>
@@ -252,7 +252,7 @@
 
             <div class="suggest-video" style="padding-top: 20px; display: flex;">
                 <a href="">
-                    <video controls style="width: 15vw; height: 18vh; border-radius: 5px;">
+                    <video controls>
                         <source src="movie.mp4" type="video/mp4">
                         <source src="movie.ogg" type="video/ogg">
                     </video>
@@ -268,7 +268,7 @@
 
             <div class="suggest-video" style="padding-top: 20px; display: flex;">
                 <a href="">
-                    <video controls style="width: 15vw; height: 18vh; border-radius: 5px;">
+                    <video controls>
                         <source src="movie.mp4" type="video/mp4">
                         <source src="movie.ogg" type="video/ogg">
                     </video>

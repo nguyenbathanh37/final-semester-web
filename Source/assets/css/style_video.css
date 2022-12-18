@@ -1,4 +1,42 @@
-div#wrapper.wrapper{
+@media only screen and (max-width: 1140px) {
+    .wrapper{
+        display: block !important;
+    }
+
+    .right-side {
+        margin-left: 20px;
+    }
+
+    .suggest-video a video{
+        width: 30vw !important; 
+        height: 25vh !important; 
+    }
+
+    .content-video{
+        font-size: large !important;
+    }
+
+    .comment-box, .comments-titles {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .suggest-video{
+        display: block !important;
+        margin: 0 10vw;
+    }
+
+    .suggest-video a video{
+        width: 100% !important; 
+        height: 30vh !important; 
+    }
+
+}
+
+
+
+.wrapper{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -197,6 +235,12 @@ a .user-avt,a .comment-other-user-avt{
     position: relative;
 }
 
+.suggest-video a video{
+    width: 15vw; 
+    height: 18vh; 
+    border-radius: 5px;
+}
+
 .suggest-video .inf-video{
     margin: 0 20px;
 
@@ -210,4 +254,5 @@ a .user-avt,a .comment-other-user-avt{
     -webkit-box-orient: vertical;  
     overflow: hidden;
 }
+
 
