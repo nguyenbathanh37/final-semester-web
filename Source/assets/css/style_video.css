@@ -16,7 +16,7 @@
         font-size: large !important;
     }
 
-    .comment-box, .comments-titles {
+    .comment-box, .comments-titles:active {
         display: none !important;
     }
 }
@@ -34,7 +34,67 @@
 
 }
 
+.drop-user{
+    position: absolute !important;
+    right: 13rem;
+    display: inline-block;
+    z-index: 999;
+}
 
+.drop-user span{
+    font-size: larger;
+}
+
+.drop-menu {
+    display: none;
+    /* left: 100%; */
+    /* top: 0%; */
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 15rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+}
+
+.drop-menu .contain-user {
+    display: flex;
+}
+
+.drop-menu .contain-user img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.drop-menu .contain-user .name-account{
+    font-weight: bolder;
+    font-size: large;
+    margin: auto;
+    margin-left: 10px;
+}
+
+
+.drop-user:hover .drop-menu{
+    display: block;
+    left: 0;
+}
+
+.drop-user:hover .drop-menu a {
+    margin-top: 10px;
+    color: black;
+    padding: 12px 16px;
+    font-size: larger;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-user:hover .drop-menu a:hover{
+    background-color: rgb(228, 224, 224);
+    border-radius: 10px;
+}
 
 .wrapper{
     display: flex;

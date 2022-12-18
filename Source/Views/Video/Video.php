@@ -58,6 +58,17 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </a>
         </div>
+        <div class="drop-user">
+            <span>Username</span>
+            <div class="drop-menu">
+                <div class="contain-user">
+                    <img class="avt-user-header" src="../../assets/images/none-avt.jpg" alt="">
+                    <p class="name-account">User Name</p>
+                </div>
+                <a href="#">Log out</a>
+                <!-- <a href="#">Home</a> -->
+            </div>
+        </div>
         <!-- log up -->
         <a href="../../Views/SignIn_SignUp/SignUp.php" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log
                 up</span><span>Create Account!</span></a>
