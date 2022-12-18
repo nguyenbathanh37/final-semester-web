@@ -60,7 +60,7 @@
                     <div  class="nav-items-title">Libary</div>
                 </a>
                  <!-- subcribed -->
-                <a href="index.php?controller=User&action=subscribed" class="nav-items">
+                <a href="index.php?controller=User&action=subcribed" class="nav-items">
                     <i class="fa-solid fa-circle-nodes"></i>
                     <div  class="nav-items-title">Following Channels</div>
                 </a>
@@ -104,19 +104,19 @@
     <div class="contain-video">
         <!--<a href="#"><img src="'.$video["thumbnail"].'" alt=""></a>-->
         <?php
-        foreach($listVideo as $video){
+        foreach($listUser as $user){
             echo '<div class="form-video">
                 <!-- link chanel of account -->
-                <a href="#"><img src="assets/images/Thumbnails-img.jpg" alt=""></a>
+                <a href="#"><img src="'.$user['avt'].'" alt=""></a>
                 
                 <div class="summary-video">
                     <!-- click move to chanel -->
-                    <a href="index.php?controller=Video&action=watch&link='.$video["link"].'"><img src="'.$video["avt"].'" title="name-account" alt="" class="icon-user"></a>
+                    <!-- <a href="index.php?controller=Video&action=watch&link=$user["link"]"><img src="'.$user["avt"].'" title="name-account" alt="" class="icon-user"></a> -->
                     <div class="inf-video">
-                        <h1 class="content-video">'.$video["namevideo"].'</h1>
+                        <h1 class="content-video">'.$user["fullname"].'</h1>
                         <!-- click move to chanel -->
-                        <a href="#"><p class="name-user">'.$video["fullname"].'</p></a>
-                        <p>'.$video["view"].' lượt xem . '.$video["dayupload"].' tháng trước</p>
+                        <a href="#"><p class="name-user">'.$user["username"].'</p></a>
+                        <p>'.$user["num_sub"].' subcribe . </p>
                     </div>
                 </div>
             </div>';
