@@ -54,10 +54,10 @@
             </a>
         </div>
         <!-- log up -->
-        <a href="./SignUp.html" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log
+        <a href="../../Views/SignIn_SignUp/SignUp.php" class="log-up-btn button-57" style="margin-left: 12px;"><span class="text">Log
                 up</span><span>Create Account!</span></a>
         <!-- log in -->
-        <a href="./SignIn.html" class="log-in-btn button-57"><span class="text">Log in</span><span>Exist Account
+        <a href="../../Views/SignIn_SignUp/SignIn.php" class="log-in-btn button-57"><span class="text">Log in</span><span>Exist Account
             </span></a>
     </div>
     <!-- body -->
@@ -112,7 +112,7 @@
         <div class="stick"></div>
         <!-- MANAGER's elements -->
         <!-- profile -->
-        <a href="../../Views/User/Profile.php" class="nav-items">
+        <a href="../../Views/User/Profile.php" class="nav-items active">
             <i class="fa-solid fa-address-card"></i>
             <div class="nav-items-title">Profile</div>
         </a>
